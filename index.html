@@ -33,6 +33,44 @@
 nav a:hover {
   background: #004c99;
 }
+.sign-in-btn {
+      background: white;
+      color: #0066cc;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .sign-in-btn:hover {
+      background: #004c99;
+      color: white;
+    }
+    /* Profile card */
+    .profile-card {
+      background: white;
+      width: 300px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+      text-align: Center;
+    }
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #0066cc;
+    }
+    .profile-card h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+    .profile-card p {
+      color: #555;
+      font-size: 0.9em;
+    }
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -80,9 +118,20 @@ nav a:hover {
   <h1>My YouTube Lectures</h1>
   <p>Learn Engineering Mathematics with clear explanations</p>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <div class="nav-links"></div>
+    <a href="index.html">🏠Home</a>
+    <a href="dashboard.html">📋Dashboard</a>
+    <a href="My Lectures.html">▶My Lectures</a>
+    <a href="Notes.html">📝Notes</a>
+    <a href="about.html">👉About</a>
+    <a href="contact.html">📞Contact</a>
+    </div>
+    <a href="signin.html" class="sign-in-btn">Sign In</a>
+     <div class="profile-card">
+    <img src="profile.jpg" alt="Profile Photo">
+    <h3>SERROZ</h3>
+    <p>Assistant Professor, Mechanical Engineering</p>
+  </div>
   </nav>
 </header>
 
@@ -130,6 +179,44 @@ allowfullscreen></iframe>
 
   <footer>
     <p>&copy; 2026 My Teaching hub</p>
+<!-- Example Contact Section -->
+<section id="contact" style="padding:40px; text-align:center; background:#f9f9f9;">
+  <h2>Contact Me</h2>
+  <p>If you have questions about lectures or need support, feel free to reach out.</p>
+  <a href="mailto:serroz.kumar123@gmail.com" class="contact-btn">Email Me</a>
+</section>
+
+<style>
+  .nav-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #004c99;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .nav-btn:hover {
+    background: #003366;
+    transform: scale(1.05);
+  }
+  .contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .contact-btn:hover {
+    background: #004c99;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+</style>
   </footer>
 </body>
 </html>
