@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Maths Study by Saroj Kumar Mahto</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e0e9fa);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0066cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .signin-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+    .signin-box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+    .signin-box h2 {
+      margin-bottom: 20px;
+      color: #0066cc;
+    }
+    .signin-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    .signin-box button {
+      width: 100%;
+      padding: 12px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .signin-box button:hover {
+      background: #004c99;
+    }
+    .signin-box p {
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .signin-box a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .signin-box a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sign In</h1>
+    <p>Access your lectures, notes, and dashboard</p>
+  </header>
+
+  <div class="signin-container">
+    <div class="signin-box">
+      <h2>Welcome Back</h2>
+      <form action="dashboard.html" method="post">
+        <input type="text" placeholder="Username or Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+      </form>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      <p><a href="#">Forgot Password?</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Maths Study by Saroj Kumar Mahto | Sign In Page</p>
+  </footer>
+</body>
+</html>
