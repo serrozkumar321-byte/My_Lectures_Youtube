@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0066cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+    .metric {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Course Dashboard</h1>
+    <p>Track your learning progress and engagement</p>
+  </header>
+
+  <section class="dashboard">
+    <div class="card">
+      <h3>🎥 No. of Videos</h3>
+      <p class="metric">120</p>
+    </div>
+    <div class="card">
+      <h3>📘 No. of Notes</h3>
+      <p class="metric">45</p>
+    </div>
+    <div class="card">
+      <h3>👀 Views on Videos</h3>
+      <p class="metric">12,340</p>
+    </div>
+    <div class="card">
+      <h3>⬇ Downloads of Notes</h3>
+      <p class="metric">3,210</p>
+    </div>
+    <div class="card">
+      <h3>📊 Engagement %</h3>
+      <p class="metric">78%</p>
+    </div>
+    <div class="card">
+      <h3>😊 Satisfaction Index</h3>
+      <p class="metric">8.6 / 10</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Maths Study by Saroj Kumar Mahto | Dashboard</p>
+  </footer>
+</body>
+</html>
