@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    /* Reset and Base Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    
+    body { 
+      /* High-quality abstract background image */
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://unsplash.com') no-repeat center center fixed; 
+      background-size: cover;
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      min-height: 100vh; 
+      padding: 20px; 
+    }
+
+    /* Container with Modern Glassmorphism Blur Effect */
+    .contact-container { 
+      background: rgba(255, 255, 255, 0.15); 
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      max-width: 950px; 
+      width: 100%; 
+      border-radius: 16px; 
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); 
+      display: flex; 
+      overflow: hidden; 
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Left Side: Contact Info Panels */
+    .contact-info { 
+      background: rgba(15, 23, 42, 0.6); 
+      color: #ffffff; 
+      padding: 50px 40px; 
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-info h2 { font-size: 2rem; margin-bottom: 10px; font-weight: 700; color: #38bdf8; }
+    .contact-info p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.5; }
+    .details-list { list-style: none; }
+    .details-list li { margin-bottom: 25px; display: flex; align-items: center; font-size: 1rem; color: #f1f5f9; }
+    .icon { font-size: 1.3rem; margin-right: 15px; background: rgba(56, 189, 248, 0.2); padding: 10px; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; }
+
+    /* Right Side: Contact Form styling */
+    .contact-form-wrapper { padding: 50px 40px; flex: 1.4; background: rgba(255, 255, 255, 0.05); }
+    .contact-form-wrapper h2 { font-size: 2rem; color: #ffffff; margin-bottom: 25px; font-weight: 700; }
+    .form-group { margin-bottom: 22px; position: relative; }
+    
+    /* Interactive input fields */
+    .form-group input, .form-group textarea { 
+      width: 100%; 
+      padding: 14px; 
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid transparent; 
+      border-radius: 8px; 
+      font-size: 1rem;
+      color: #0f172a;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    .form-group textarea { height: 120px; resize: none; }
+    .form-group input:focus, .form-group textarea:focus { 
+      background: #ffffff;
+      border-color: #38bdf8;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    }
+
+    /* Animated Premium Button */
+    .submit-btn { 
+      background: linear-gradient(135deg, #38bdf8, #0284c7); 
+      color: #ffffff; 
+      border: none; 
+      padding: 14px; 
+      width: 100%; 
+      border-radius: 8px; 
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer; 
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+    }
+    .submit-btn:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+    }
+    .submit-btn:active { transform: translateY(0); }
+
+    /* Responsive Design Mobile Adjustments */
+    @media (max-width: 768px) { 
+      .contact-container { flex-direction: column; margin: 10px; } 
+      .contact-info, .contact-form-wrapper { padding: 35px 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <!-- Left Information Column -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Have a question or want to collaborate? Drop us a line and our expert team will respond within 24 hours.</p>
+      <ul class="details-list">
+        <li><span class="icon">📍</span> My study </li>
+        <li><span class="icon">📞</span> +91 9304069448</li>
+        <li><span class="icon">✉️</span> serroz.kumar123@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- Right Interaction Column -->
+    <div class="contact-form-wrapper">
+      <h2>Send Message</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="How can we help you?" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
