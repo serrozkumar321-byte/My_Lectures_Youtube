@@ -7,19 +7,84 @@
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #e0e9fa);
+      background: linear-gradient(to right, #f4f4f4, #e0e9fa);
       margin: 0;
       padding: 0;
     }
     header {
-      background: #0066cc;
+      background: #00b1cc;
       color: white;
       padding: 20px;
       text-align: center;
+      position: relative;
     }
     header h1 {
       margin: 0;
       font-size: 2em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      margin-top: 12px;
+    }
+    nav a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background: #004c99;
+    }
+    .sign-in-btn {
+      background: white;
+      color: #0066cc;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .sign-in-btn:hover {
+      background: #004c99;
+      color: white;
+    }
+    /* Profile card */
+    .profile-card {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: white;
+      width: 140px;
+      margin: 0;
+      padding: 6px;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.12);
+      text-align: center;
+      z-index: 2;
+    }
+    .profile-card img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      margin-bottom: 4px;
+      border: 2px solid #0066cc;
+    }
+    .profile-card h3 {
+      margin: 4px 0 2px;
+      color: #333;
+      font-size: 0.8em;
+    }
+    .profile-card p {
+      color: #555;
+      font-size: 0.68em;
+      margin: 0;
+      line-height: 1.2;
     }
     .signin-container {
       display: flex;
@@ -76,18 +141,32 @@
       text-decoration: underline;
     }
     footer {
-      background: #2c3e50;
+      background: #00aacc;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 10px;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sign In</h1>
-    <p>Access your lectures, notes, and dashboard</p>
+    <h1>My YouTube Lectures</h1>
+    <p>Learn Engineering Mathematics with clear explanations</p>
+    <nav>
+      <a href="home.html">🏠Home</a>
+      <a href="dashboard.html">📋Dashboard</a>
+      <a href="index.html">▶My Lectures</a>
+      <a href="Notes.html">📝Notes</a>
+      <a href="about.html">👉About</a>
+      <a href="Contact.html">📞Contact</a>
+      <a href="signin.html" class="sign-in-btn">Sign In</a>
+    </nav>
+    <div class="profile-card">
+      <img src="watermarks.jpg" alt="Profile Photo">
+      <h3>Saroj Kumar</h3>
+      <p>Assistant Professor, Mechanical Engineering</p>
+    </div>
   </header>
 
   <div class="signin-container">

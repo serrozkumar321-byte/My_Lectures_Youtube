@@ -16,24 +16,32 @@
       color: white;
       padding: 20px;
       text-align: center;
+      position: relative;
     }
     header h1 {
       margin: 0;
       font-size: 2em;
     }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      margin-top: 12px;
+    }
     nav a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #0066cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-nav a:hover {
-  background: #004c99;
-}
-.sign-in-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background: #004c99;
+    }
+    .sign-in-btn {
       background: white;
       color: #0066cc;
       padding: 8px 16px;
@@ -48,49 +56,58 @@ nav a:hover {
     }
     /* Profile card */
     .profile-card {
+      position: absolute;
+      top: 10px;
+      left: 10px;
       background: white;
-      width: 300px;
-      margin: 40px auto;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-      text-align: Center;
+      width: 140px;
+      margin: 0;
+      padding: 6px;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.12);
+      text-align: center;
+      z-index: 2;
     }
     .profile-card img {
-      width: 100px;
-      height: 100px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      margin-bottom: 15px;
-      border: 3px solid #0066cc;
+      margin-bottom: 4px;
+      border: 2px solid #0066cc;
     }
     .profile-card h3 {
-      margin: 10px 0 5px;
+      margin: 4px 0 2px;
       color: #333;
+      font-size: 0.8em;
     }
     .profile-card p {
       color: #555;
-      font-size: 0.9em;
+      font-size: 0.68em;
+      margin: 0;
+      line-height: 1.2;
     }
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;
       padding: 20px;
     }
     .card {
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 15px;
-      width: 300px;
+      margin: 0;
+      width: min(360px, 100%);
       transition: transform 0.3s;
     }
     .card:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     .card iframe {
       width: 100%;
-      height: 170px;
+      aspect-ratio: 16 / 9;
+      height: auto;
       border-radius: 10px 10px 0 0;
     }
     .card h3 {
@@ -118,21 +135,19 @@ nav a:hover {
   <h1>My YouTube Lectures</h1>
   <p>Learn Engineering Mathematics with clear explanations</p>
   <nav>
-    <div class="nav-links"></div>
     <a href="home.html">🏠Home</a>
     <a href="dashboard.html">📋Dashboard</a>
     <a href="index.html">▶My Lectures</a>
     <a href="Notes.html">📝Notes</a>
     <a href="about.html">👉About</a>
     <a href="Contact.html">📞Contact</a>
-    </div>
     <a href="signin.html" class="sign-in-btn">Sign In</a>
-     <div class="profile-card">
+  </nav>
+  <div class="profile-card">
     <img src="watermarks.jpg" alt="Profile Photo">
     <h3>Saroj Kumar</h3>
     <p>Assistant Professor, Mechanical Engineering</p>
   </div>
-  </nav>
 </header>
 
 
@@ -250,7 +265,7 @@ Replace the word higher degree with higher order in the explanation.</p>
     </div>
      <div class="card">
       <iframe width="560" height="315" 
-src="https://www.youtube-nocookie.com/embed/kYbrqtoqfck" 
+src="https://www.youtube-nocookie.com/embed/sbFcH2MjB6A" 
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>

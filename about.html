@@ -6,96 +6,85 @@
   <title>About | Maths Study by Saroj Kumar Mahto</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f6f8;
-      color: #223;
+      background: linear-gradient(to right, #f4f4f4, #e0e9fa);
+      margin: 0;
+      padding: 0;
     }
     header {
-      background: #e0a800;
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 12px 20px;
-      gap: 10px;
-    }
-    .brand a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-    .nav-menu {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-    }
-    .nav-menu a,
-    .dropdown button {
-      color: #fff;
-      text-decoration: none;
-      background: transparent;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.95rem;
-      transition: background 0.2s ease;
-    }
-    .nav-menu a:hover,
-    .dropdown button:hover {
-      background: rgba(255,255,255,0.16);
-    }
-    .dropdown {
+      background: #00b1cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
       position: relative;
     }
-    .dropdown-content {
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      margin-top: 12px;
+    }
+    nav a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background: #004c99;
+    }
+    .sign-in-btn {
+      background: white;
+      color: #0066cc;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .sign-in-btn:hover {
+      background: #004c99;
+      color: white;
+    }
+    /* Profile card */
+    .profile-card {
       position: absolute;
-      top: 100%;
-      left: 0;
-      min-width: 180px;
-      background: #fff;
-      color: #222;
+      top: 10px;
+      left: 10px;
+      background: white;
+      width: 140px;
+      margin: 0;
+      padding: 6px;
       border-radius: 10px;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-      display: none;
-      overflow: hidden;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.12);
+      text-align: center;
+      z-index: 2;
     }
-    .dropdown-content a {
-      display: block;
-      padding: 10px 14px;
-      color: #222;
-      text-decoration: none;
-      white-space: nowrap;
+    .profile-card img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      margin-bottom: 4px;
+      border: 2px solid #0066cc;
     }
-    .dropdown-content a:hover {
-      background: #f4f4f4;
+    .profile-card h3 {
+      margin: 4px 0 2px;
+      color: #333;
+      font-size: 0.8em;
     }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .cta-link {
-      background: #fff;
-      color: #1f4c73;
-      padding: 10px 16px;
-      border-radius: 24px;
-      text-decoration: none;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    .cta-link:hover {
-      background: #f5f5f5;
+    .profile-card p {
+      color: #555;
+      font-size: 0.68em;
+      margin: 0;
+      line-height: 1.2;
     }
     main {
       max-width: 1140px;
@@ -213,24 +202,23 @@
 </head>
 <body>
   <header>
-    <div class="header-inner">
-      <div class="brand"><a href="home.html">Maths Study</a></div>
-      <nav class="nav-menu">
-        <a href="home.html">Home</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="index.html">My Lectures</a>
-        <a href="Contact.html">Contact</a>
-        <a href="#about">About</a>
-        <div class="dropdown">
-          <button type="button">Student Corner ▾</button>
-          <div class="dropdown-content">
-            <a href="#benefits">Course Benefits</a>
-            <a href="#features">Learning Features</a>
-            <a href="signin.html">Sign In</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button type="button">Others ▾</button>
+    <h1>My YouTube Lectures</h1>
+    <p>Learn Engineering Mathematics with clear explanations</p>
+    <nav>
+      <a href="home.html">🏠Home</a>
+      <a href="dashboard.html">📋Dashboard</a>
+      <a href="index.html">▶My Lectures</a>
+      <a href="Notes.html">📝Notes</a>
+      <a href="about.html">👉About</a>
+      <a href="Contact.html">📞Contact</a>
+      <a href="signin.html" class="sign-in-btn">Sign In</a>
+    </nav>
+    <div class="profile-card">
+      <img src="watermarks.jpg" alt="Profile Photo">
+      <h3>Saroj Kumar</h3>
+      <p>Assistant Professor, Mechanical Engineering</p>
+    </div>
+  </header>
           <div class="dropdown-content">
             <a href="#contact">Contact</a>
             <a href="home.html">Home</a>

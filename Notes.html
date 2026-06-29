@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes - Maths Study by Saroj Kumar Mahto</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    
+    body { 
+      background: linear-gradient(to right, #f4f4f4, #e0e9fa);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #00b1cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      margin-top: 12px;
+    }
+    nav a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background: #004c99;
+    }
+    .sign-in-btn {
+      background: white;
+      color: #0066cc;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .sign-in-btn:hover {
+      background: #004c99;
+      color: white;
+    }
+    /* Profile card */
+    .profile-card {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: white;
+      width: 140px;
+      margin: 0;
+      padding: 6px;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.12);
+      text-align: center;
+      z-index: 2;
+    }
+    .profile-card img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      margin-bottom: 4px;
+      border: 2px solid #0066cc;
+    }
+    .profile-card h3 {
+      margin: 4px 0 2px;
+      color: #333;
+      font-size: 0.8em;
+    }
+    .profile-card p {
+      color: #555;
+      font-size: 0.68em;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    /* Main Content Container */
+    .notes-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .page-title h1 {
+      font-size: 2.5em;
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+
+    .page-title p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Topics Grid */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* Topic Button/Card */
+    .topic-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.2);
+      border-color: #0066cc;
+      background: #f0f8ff;
+    }
+
+    .topic-icon {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .topic-card h3 {
+      color: #0066cc;
+      margin: 10px 0;
+      font-size: 1.3em;
+    }
+
+    .topic-card p {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #0066cc, #004c99);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+      background: linear-gradient(135deg, #004c99, #003366);
+    }
+
+    .download-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Footer */
+    footer {
+      background: #00aacc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .topics-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .page-title h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My YouTube Lectures</h1>
+    <p>Learn Engineering Mathematics with clear explanations</p>
+    <nav>
+      <a href="home.html">🏠Home</a>
+      <a href="dashboard.html">📋Dashboard</a>
+      <a href="index.html">▶My Lectures</a>
+      <a href="Notes.html">📝Notes</a>
+      <a href="about.html">👉About</a>
+      <a href="Contact.html">📞Contact</a>
+      <a href="signin.html" class="sign-in-btn">Sign In</a>
+    </nav>
+    <div class="profile-card">
+      <img src="watermarks.jpg" alt="Profile Photo">
+      <h3>Saroj Kumar</h3>
+      <p>Assistant Professor, Mechanical Engineering</p>
+    </div>
+  </header>
+
+  <div class="notes-container">
+    <div class="page-title">
+      <h1>📚 Engineering Mathematics Notes</h1>
+      <p>Download comprehensive notes for each topic covered in the lectures</p>
+    </div>
+
+    <div class="topics-grid">
+      <!-- Differential Calculus -->
+      <div class="topic-card">
+        <div class="topic-icon">📈</div>
+        <h3>Differential Calculus</h3>
+        <p>Differentiation, rates of change, and applications</p>
+        <a href="notes_files/Differential_Calculus.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Integral Calculus -->
+      <div class="topic-card">
+        <div class="topic-icon">∫</div>
+        <h3>Integral Calculus</h3>
+        <p>Integration, definite & indefinite integrals</p>
+        <a href="notes_files/Integral_Calculus.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Differential Equations -->
+      <div class="topic-card">
+        <div class="topic-icon">🔀</div>
+        <h3>Differential Equations</h3>
+        <p>First order, higher order equations & applications</p>
+        <a href="notes_files/Differential_Equations.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Successive Differentiation -->
+      <div class="topic-card">
+        <div class="topic-icon">↗️</div>
+        <h3>Successive Differentiation</h3>
+        <p>Higher derivatives and nth derivatives</p>
+        <a href="notes_files/Successive_Differentiation.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Linear Algebra -->
+      <div class="topic-card">
+        <div class="topic-icon">🔲</div>
+        <h3>Linear Algebra</h3>
+        <p>Matrices, determinants, eigenvalues & eigenvectors</p>
+        <a href="notes_files/Linear_Algebra.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Numerical Methods -->
+      <div class="topic-card">
+        <div class="topic-icon">🔢</div>
+        <h3>Numerical Methods</h3>
+        <p>Approximation, interpolation, and solving equations</p>
+        <a href="notes_files/Numerical_Methods.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Laplace Transform -->
+      <div class="topic-card">
+        <div class="topic-icon">🌊</div>
+        <h3>Laplace Transform</h3>
+        <p>Transforms, inverse transforms, and applications</p>
+        <a href="notes_files/Laplace_Transform.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Fourier Series -->
+      <div class="topic-card">
+        <div class="topic-icon">〰️</div>
+        <h3>Fourier Series</h3>
+        <p>Periodic functions, convergence, and analysis</p>
+        <a href="notes_files/Fourier_Series.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Partial Differential Equations -->
+      <div class="topic-card">
+        <div class="topic-icon">∂</div>
+        <h3>Partial Differential Equations</h3>
+        <p>Classification, methods of solution</p>
+        <a href="notes_files/Partial_Differential_Equations.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Vector Calculus -->
+      <div class="topic-card">
+        <div class="topic-icon">➡️</div>
+        <h3>Vector Calculus</h3>
+        <p>Gradient, divergence, curl, line & surface integrals</p>
+        <a href="notes_files/Vector_Calculus.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Complex Analysis -->
+      <div class="topic-card">
+        <div class="topic-icon">ℂ</div>
+        <h3>Complex Analysis</h3>
+        <p>Complex numbers, analytic functions, integration</p>
+        <a href="notes_files/Complex_Analysis.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+
+      <!-- Fourier Transform -->
+      <div class="topic-card">
+        <div class="topic-icon">📊</div>
+        <h3>Fourier Transform</h3>
+        <p>Continuous & discrete transforms, convolution</p>
+        <a href="notes_files/Fourier_Transform.pdf" download class="download-btn">📥 Download Notes</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Maths Study by Saroj Kumar Mahto | Notes & Resources</p>
+  </footer>
+</body>
+</html>
